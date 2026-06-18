@@ -1,5 +1,5 @@
 # Specification & Wireframes
-1. Project Overview
+# Project Overview
 Project Name: Campus Life Planner
 
 ## Purpose and description:
