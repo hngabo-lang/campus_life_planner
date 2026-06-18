@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: 140px;
+}
+
+body {
+  font-family: 'Caveat', cursive;
+  background: #08f4cd;
+  color: #333;
+}
+.skip-link{
+    position: absolute;
+    left: -9999px;
+}
+
+.skip-link: focus{
+    left: 10px;
+}
+/* 
+   DARK MODE */
+ 
+body.dark {
+    background: #040408;
+    color: #e0e0e0;
+}
+ 
+body.dark header {
+    background: #06070a;
+    color: #08f4cd;
+}
+ 
+body.dark section {
+    background: #16213e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+ 
+body.dark .card {
+    background: #0f3460;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+ 
+body.dark input,
+body.dark select,
+body.dark textarea {
+    background: #0f3460;
+    color: #e0e0e0;
+    border: 1px solid #444;
+}
+ 
+body.dark table {
+    color: #e0e0e0;
+}
+ 
+body.dark th,
+body.dark td {
+    border: 1px solid #444;
+}
+ 
+body.dark th {
+    background: #0f3460;
+}
+ 
+body.dark footer {
+    background: #010102;
+    color: #e0e0e0;
+}
+ 
+body.dark nav a {
+    color: #08f4cd;
+}
+ 
+body.dark button {
+    background: #378ADD;
+}
+ 
+body.dark button:hover {
+    background: #185FA5;
+}
+ 
+body.dark .update-btn {
+    background-color: #2e7d32;
+}
+ 
+body.dark .delete-btn {
+    background-color: #c62828;
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgb(62, 130, 159);
+    color: #08f4cd;
+text-align: center;
+    padding: 15px;
+    z-index: 1000;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+main {
+    margin-top: 120px;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+h2{
+text-align: center;    
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  align-items: right;
+}
+
+nav a:hover{
+    transform: translate(-4px);
+    transition: 0.3s;
+}
+main {
+  padding: 1rem;
+}
+
+section {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  scroll-margin-top: 140px;
+}
+
+
+#dashboard{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.card {
+  background: #ecf0f1;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+    transform: translate(-4px);
+    transition: 0.3s;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border-radius: 5px;
+font-family: 'Caveat', cursive;
+}
+
+button {
+  background: #3498db;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-family: 'Caveat', cursive;
+}
+
+button:hover {
+  background: #2980b9;
+    transform: translate(-4px);
+    transition: 0.3s;
+}
+
+#message{
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    font-weight: bold;
+    border-radius: 5px;
+   color: #155724;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
+footer {
+  background: rgb(62, 130, 159);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.update-btn{
+    background-color: #4CAF50;
+    color: white;
+}
+
+.delete-btn{
+    background-color: #FF5252;
+    color: white;
+}
+
+#settings{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.set{
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+}
+
+@media (max-width: 768px) {
+  #dashboard {
+    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+        flex-direction: column;
+        gap: 10px;
+  }
+
+  table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    input,
+    select,
+    button{
+        width: 100%;
+    }
+
+    .controls{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    body{
+        padding: 10px;
+    }
+}
+
+
+
+@media(max-width: 767px){
+
+    .setting-row{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .setting-row select,
+    .setting-row input{
+        width: 100%;
+    }
+
+}
+
+@media (min-width: 1024px){
+    #dashboard{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (max-width: 360px){
+    nav {flex-direction: column}
+    .card {padding: 0.5rem;}
+    table { font-size: 0.8rem}
+}
