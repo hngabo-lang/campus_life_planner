@@ -32,4 +32,3 @@ function generateNextId() {
     // turns task input like 1 into "001" and 10 into "010"
     return "tsk_" + String(nextNumber).padStart(3, "0");
 }
-
