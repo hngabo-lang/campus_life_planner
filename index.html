@@ -1,1 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Life Planner</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
 
+<body>
+    <!-- skip link-->
+<a href="#about" class="skip-link">
+    Skip to Main Content
+</a>
+  <!-- This is the header part -->
+  <header>
+
+    <h1>Campus Life Planner</h1>
+
+    <nav>
+      <a href="#dashboard-p">Dashboard</a>
+      <a href="#form">Add Task</a>
+      <a href="#search">Search</a>
+      <a href="#tasks">Tasks</a>
+      <a href="#settings">Settings</a>
+    </nav>
+  </header>
+
+  <!-- This is the main part -->
+  <main>
+<section id="about">
+      <h2>ABOUT US</h2>
+
+    <p>
+        This is a user friendly system that helps learners to have a better management of their activities including assignments with better schedule.
+    </p>
+
+    <h3>Contact</h3>
+
+    <p><b>School Email:</b> h.ngabo@alustudent.com <br> <b>Personal Email:</b> harrytote1@gmail.com</p>
+
+    <p>
+       <b> GitHub:</b>
+        <a href="https://github.com/hngabo-lang">
+            github.com/hngabo-lang
+        </a>
+    </p>
+    
+    </section>
+    <!-- This is the dashboard -->
+    <section id="dashboard-p">
+      <h2>Dashboard</h2>
+
+       <div id="dashboard">
+
+      <div class="card">
+        <h3>Total Tasks</h3>
+        <p id="total-tasks">No task yet created</p>
+      </div>
+
+      <div class="card">
+        <h3>Total Duration</h3>
+        <p id="total-duration">Try setting durations</p>
+      </div>
+
+      <div class="card">
+        <h3>Top Tag</h3>
+        <p id="top-tag">None</p>
+      </div>
+
+      <div class="card">
+        <h3>Due Soon</h3>
+        <p id="due-soon">No task matching the deadline</p>
+      </div>
+<div class="card">
+    <h3>Weekly Target</h3>
+    <p id="weekly-target-card">
+        set your weekly target in settings
+    </p>
+</div>
+    </div>
+    </section>
+
+    <!-- ADD TASK-->
+    <section id="form">
+      <h2>Add Task</h2>
+      <form id="forms">
+       <input type="hidden" id="tskd">
+        <!-- Input template reused -->
+        <label>Title</label>
+        <input type="text" id="title" placeholder="frontend web dev" required>
+
+        <label>Due Date</label>
+        <input type="date" id="dueDate" required>
+
+        <label>Duration (minutes)</label>
+        <input type="number" id="duration" placeholder="5 min" required>
+
+        <label>Tag</label>
+        <input type="text" id="tag" placeholder="Study, Club, Assignment, game, meeting, office hours">
+<div
+
+<p id="message" role="status" aria-live="polite"></p>
+</div>
+        <button type="submit" id="submitBtn">Add Task</button>
+
+      </form>
+    </section>
+
+    <!-- search -->
+    <section id="search">
+      <h2>Search & Sort</h2>
+
+      <input type="text" id="search-box" placeholder="Type to search">
+
+      <label>
+        <input type="checkbox" id="case-toggle">
+        Case Sensitive
+      </label>
+
+      <select id="sort">
+        <option value="date">Sort by Date</option>
+        <option value="title">Sort by Title</option>
+        <option value="duration">Sort by Duration</option>
+        </select>
+    
+
+<button id="export-btn">
+    Export JSON
+</button>  
+    </section>
+
+    <!-- table of tasks -->
+    <section id="tasks">
+      <h2>Tasks</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Due Date</th>
+            <th>Duration</th>
+            <th>Tag</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <tbody id="task-list">
+          <!-- JS inserts tasks here -->
+            </tbody>
+      </table>
+    </section>
+
+    <!-- settings -->
+    <section id="settings">
+      <h2>Settings</h2>
+      <div class="set">
+<label for="unit">Time Unit:</label>
+<select id="unit">
+    <option value="choose">Choose unit</option>
+    <option value="minutes">Minutes</option>
+    <option value="hours">Hours</option>
+    
+</select>
+</div>
+<div class="set">
+<label for="weeklyTarget">
+    Weekly Study Target:</label>
+<input type="number" id="weeklyTarget" placeholder="Set your time in min eg:120" min="0"/>
+</div>
+<div class="set"> 
+    <label>Theme</label>     
+<input type="radio"
+       name="theme"
+       value="Light"
+       id="lightTheme">
+
+<label for="lightTheme">
+    Light
+</label>
+
+<input type="radio"
+       name="theme"
+       value="Dark"
+       id="darkTheme">
+
+<label for="darkTheme">
+    Dark
+</label>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Part of footer -->
+  <footer>
+    <p>&copy; Campus Life Planner 2026, All rights reserved</p>
+  </footer>
+
+  <!-- This is footer part -->
+  <!--<script src="scripts/sys.js"></script>-->
+<script src="scripts/state.js"></script>
+<script src="scripts/storage.js"></script>
+<script src="scripts/validators.js"></script>
+<script src="scripts/ui.js"></script>
+<script src="scripts/search.js"></script>
+</body>
+</html>
