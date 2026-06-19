@@ -1,8 +1,8 @@
 // Forms & Regex Validation
 // This file holds every regex rule we use to check the task form
 
-// space at the start or the end of the title will not work.
-const titleRegex = /^\S(?:.*\S)?$/;
+// no space at the start or the end of the title.
+const titleRegex = /^(?=.{3,20}$)[A-Za-z]+(?: [A-Za-z]+)*$/;
 
 // Duration 
 const durationRegex = /^(0|[1-9]\d*)(\.\d{1,2})?$/;
@@ -40,7 +40,7 @@ function validateTaskFields(fields) {
     const tag = fields.tag;
 
     if (!titleRegex.test(title)) {
-        return { valid: false, error: "Title can't start or end with a space." };
+        return { valid: false, error: "Title can't start or end with a space and must be letters only." };
     }
 
     if (!tagRegex.test(tag)) {
@@ -134,4 +134,3 @@ clearMessage();
 
 // refusing past date
 document.getElementById("dueDate").min = new Date().toISOString().split("T")[0];
-
