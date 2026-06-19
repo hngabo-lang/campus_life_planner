@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Tests</title>
+</head>
+<body style="font-family: 'Caveat', cursive;">
+
+<h2>Testing validations</h2>
+<ol id="outcomes"></ol>
+
+<script>
+const titleRegex = /^[A-Za-z0-9 ]{3,50}$/;
+const tagRegex = /^[A-Za-z ]{2,20}$/;
+const durationRegex = /^[1-9][0-9]*$/;
+const repeatedWordRegex = /\b(\w+)\s+\1\b/i;
+
+const outcomes = document.getElementById("outcomes");
+
+function test(name, result) {
+    outcomes.innerHTML += `
+    <li>${result ? "PASS" : "FAIL"} - ${name}</li>`;
+}
+
+test("Valid title", titleRegex.test("play basketball"));
+test("rejected a number", !tagRegex.test("play1"));
+test("Valid duration found", durationRegex.test("50"));
+test("Repeated words found", repeatedWordRegex.test("play play"));
+</script>
+
+</body>
+</html>
