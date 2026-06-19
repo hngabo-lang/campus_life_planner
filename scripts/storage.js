@@ -69,4 +69,3 @@ if (settings.theme === "Dark") {
 } else {
     document.getElementById("lightTheme").checked = true;
 }
-
