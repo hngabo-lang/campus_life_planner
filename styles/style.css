@@ -109,6 +109,15 @@ main {
     margin-top: 120px;
 }
 
+/*used when the duration is greater than weekly target*/
+.over-cap { color: #b3261e; }
+.sr-only { position: absolute; left: -9999px; }
+.set{
+    display:flex;
+    align-items:center;
+    padding:12px 0;
+}
+
 nav{
     display: flex;
     justify-content: center;
