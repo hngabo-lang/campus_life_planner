@@ -1,5 +1,4 @@
 // Regex Search
-
 function compileSafeRegex(rawText, caseSensitive) {
     if (!rawText) return null;
 
@@ -36,4 +35,3 @@ document.getElementById("search-box").addEventListener("input", runSearch);
 
 // running again the search when they toggle 
 document.getElementById("case-toggle").addEventListener("change", runSearch);
-
