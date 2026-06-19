@@ -4,6 +4,7 @@
 This is a user friendly system that helps learners to have a better management of their activities including assignments, and campus daily activities with better schedule.
 ---
 ## Demo video: https://youtu.be/l6x4u_tBCqM?si=jO0yukqv3drhavIZ
+   live url https://hngabo-lang.github.io/campus_life_planner/
 ## Features found
 
 ### Task Management
