@@ -48,7 +48,7 @@ function renderTasks(list = tasks, re = null) {
 // Showing current data inside the form to change it.
 function editTask(id) {
     const task = tasks.find(function (t) {
-        return t.id === id;
+      return String(t.id) === String(id);
     });
 
     if (!task) return; // when task is not found, do nothing
@@ -72,7 +72,7 @@ function deleteTask(id) {
     }
 
     tasks = tasks.filter(function (task) {
-        return task.id !== id;
+        return String(task.id) !== String(id);
     });
 
     saveTasks();
